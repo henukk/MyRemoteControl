@@ -1,16 +1,49 @@
-import Favorite from '@mui/icons-material/Favorite';
-import Home from '@mui/icons-material/Home';
+import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
+import ColorLensIcon from '@mui/icons-material/ColorLens';
+import LightIcon from '@mui/icons-material/Light';
+import LightTwoToneIcon from '@mui/icons-material/LightTwoTone';
+import LightOutlinedIcon from '@mui/icons-material/LightOutlined';
 
 const ButtonsConfig = [
   {
-    text: "Botón 1",
-    icon: <Favorite />,
-    code: "1"
+    text: "ON/OFF",
+    icon: <PowerSettingsNewIcon />,
+    code: "FF02FD"
   },
   {
-    text: "Botón 2",
-    icon: <Home />,
-    code: "2"
+    text: "Rojo",
+    icon: <ColorLensIcon />,
+    code: "FF1AE5"
+  },
+  {
+    text: "Green",
+    icon: <ColorLensIcon />,
+    code: "FF9A65"
+  },
+  {
+    text: "Blue",
+    icon: <ColorLensIcon />,
+    code: "FFA25D"
+  },
+  {
+    text: "White",
+    icon: <ColorLensIcon />,
+    code: "FF22DD"
+  },
+  {
+    text: "Low",
+    icon: <LightIcon />,
+    code: "FF32CD"
+  },
+  {
+    text: "Medium",
+    icon: <LightTwoToneIcon />,
+    code: "FFF807"
+  },
+  {
+    text: "High",
+    icon: <LightOutlinedIcon />,
+    code: "FFD827"
   }
 ];
 

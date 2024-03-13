@@ -8,9 +8,12 @@ function App() {
   const [ipAddress, setIpAddress] = useState('192.168.0.200');
 
   const eiow = (id) => {
-    fetch(`http://${ipAddress}?${id}`)
-      .then(response => response.json())
-      .then(data => console.log(data))
+    fetch(`http://${ipAddress}?code=${id}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok.');
+        }
+      })
       .catch(error => {
         console.error('Error:', error);
         toast.error('Host unreachable!');
@@ -30,7 +33,7 @@ function App() {
     <Box sx={{ p: 2 }}>
       <Paper elevation={3} sx={{ p: 2, marginBottom: 2 }}>
         <Typography variant="h4" style={{ color: '#2E3B55', textAlign: 'center', marginBottom: '20px' }}>
-          My remote controll
+          My remote control
         </Typography>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <TextField
